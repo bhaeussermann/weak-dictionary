@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9AA40D1C-97EB-448C-A665-B35EC99840F1}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{62131224-A5D2-4404-BAB5-AD908AB4922B}"
@@ -14,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B2170CD5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeakDictionary", "src\WeakDictionary\WeakDictionary.csproj", "{564E2EB6-6A1F-4453-9DA3-A1A0116E22D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeakDictionary.Tests", "tests\WeakDictionary.Tests\WeakDictionary.Tests.csproj", "{FB5DF1BA-06D1-4566-A183-F09AAED8D505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeakDictionary.Tests", "tests\WeakDictionary.Tests\WeakDictionary.Tests.csproj", "{FB5DF1BA-06D1-4566-A183-F09AAED8D505}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

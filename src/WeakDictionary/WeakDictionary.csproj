@@ -4,13 +4,24 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>BernhardHaus.Collections.WeakDictionary</AssemblyName>
     <RootNamespace>BernhardHaus.Collections.WeakDictionary</RootNamespace>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Title>Weak Dictionary</Title>
     <Version>1.0.0</Version>
     <Authors>Bernhard Häussermann</Authors>
+    <Description>An implementation of a dictionary having weak references on its values.
+
+      Supported platforms:
+
+      - .NET 5 and 6
+      - .NET Framework 4.6.1 - 4.8
+    </Description>
+    
     <PackageProjectUrl></PackageProjectUrl>
-    <Description>An implementation of a dictionary having weak references on its values.</Description>
-    <PackageTags>dictionary weakreference</PackageTags>
+    <PackageTags>WeakDictionary;Dictionary;WeakReference</PackageTags>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/bhaeussermann/weak-dictionary</RepositoryUrl>
+    
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
 </Project>
