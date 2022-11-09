@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>BernhardHaus.Collections.WeakDictionary</AssemblyName>
     <RootNamespace>BernhardHaus.Collections.WeakDictionary</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -11,8 +11,6 @@
     <PackageProjectUrl></PackageProjectUrl>
     <Description>An implementation of a dictionary having weak references on its values.</Description>
     <PackageTags>dictionary weakreference</PackageTags>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>

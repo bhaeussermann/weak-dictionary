@@ -1,12 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net461;net50</TargetFrameworks>
     <AssemblyName>BernhardHaus.Collections.WeakDictionary.Tests</AssemblyName>
     <RootNamespace>BernhardHaus.Collections.WeakDictionary.Tests</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

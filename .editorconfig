@@ -13,8 +13,5 @@ dotnet_style_qualification_for_field = true:error
 dotnet_style_qualification_for_method = false:error
 dotnet_style_qualification_for_property = false:error
 
-# File scoped namespaces
-csharp_style_namespace_declarations = file_scoped:suggestion
-
 [*.{csproj,config}]
 indent_size = 2
