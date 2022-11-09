@@ -1,0 +1,20 @@
+root = true
+
+[*]
+indent_style = space
+
+[*.cs]
+indent_size = 4
+dotnet_sort_system_directives_first = true
+
+# this. preferences
+dotnet_style_qualification_for_event = false:error
+dotnet_style_qualification_for_field = true:error
+dotnet_style_qualification_for_method = false:error
+dotnet_style_qualification_for_property = false:error
+
+# File scoped namespaces
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+[*.{csproj,config}]
+indent_size = 2

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9AA40D1C-97EB-448C-A665-B35EC99840F1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{62131224-A5D2-4404-BAB5-AD908AB4922B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B2170CD5-E4EC-476D-89A3-61D7B0685346}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeakDictionary", "src\WeakDictionary\WeakDictionary.csproj", "{564E2EB6-6A1F-4453-9DA3-A1A0116E22D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeakDictionary.Tests", "tests\WeakDictionary.Tests\WeakDictionary.Tests.csproj", "{FB5DF1BA-06D1-4566-A183-F09AAED8D505}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{564E2EB6-6A1F-4453-9DA3-A1A0116E22D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564E2EB6-6A1F-4453-9DA3-A1A0116E22D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564E2EB6-6A1F-4453-9DA3-A1A0116E22D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564E2EB6-6A1F-4453-9DA3-A1A0116E22D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5DF1BA-06D1-4566-A183-F09AAED8D505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5DF1BA-06D1-4566-A183-F09AAED8D505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5DF1BA-06D1-4566-A183-F09AAED8D505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5DF1BA-06D1-4566-A183-F09AAED8D505}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{564E2EB6-6A1F-4453-9DA3-A1A0116E22D9} = {62131224-A5D2-4404-BAB5-AD908AB4922B}
+		{FB5DF1BA-06D1-4566-A183-F09AAED8D505} = {B2170CD5-E4EC-476D-89A3-61D7B0685346}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27DB57EA-23B5-44B7-B804-568140D4B8F7}
+	EndGlobalSection
+EndGlobal
