@@ -5,11 +5,11 @@
     <AssemblyName>BernhardHaus.Collections.WeakDictionary</AssemblyName>
     <RootNamespace>BernhardHaus.Collections.WeakDictionary</RootNamespace>
     <Title>Weak Dictionary</Title>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Bernhard Häussermann</Authors>
     <Description>An implementation of a dictionary having weak references on its values.</Description>
     
-    <PackageProjectUrl>https://dev.to/bhaeussermann/creating-a-weak-dictionary-in-net-1fo</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/bhaeussermann/weak-dictionary</PackageProjectUrl>
     <PackageTags>WeakDictionary;Dictionary;WeakReference</PackageTags>
     <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
