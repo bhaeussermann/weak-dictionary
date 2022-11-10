@@ -7,15 +7,9 @@
     <Title>Weak Dictionary</Title>
     <Version>1.0.0</Version>
     <Authors>Bernhard Häussermann</Authors>
-    <Description>An implementation of a dictionary having weak references on its values.
-
-      Supported platforms:
-
-      - .NET 5 and 6
-      - .NET Framework 4.6.1 - 4.8
-    </Description>
+    <Description>An implementation of a dictionary having weak references on its values.</Description>
     
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://dev.to/bhaeussermann/creating-a-weak-dictionary-in-net-1fo</PackageProjectUrl>
     <PackageTags>WeakDictionary;Dictionary;WeakReference</PackageTags>
     <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
