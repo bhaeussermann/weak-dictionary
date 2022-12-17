@@ -9,7 +9,7 @@ namespace BernhardHaus.Collections.WeakDictionary
     public class WeakDictionary<TKey, TValue> : IDictionary<TKey, TValue>
         where TValue : class
     {
-        private readonly Dictionary<TKey, WeakReference> internalDictionary = new Dictionary<TKey, WeakReference>();
+        private readonly IDictionary<TKey, WeakReference> internalDictionary = new Dictionary<TKey, WeakReference>();
         private readonly ConditionalWeakTable<TValue, Finalizer> conditionalWeakTable = new ConditionalWeakTable<TValue, Finalizer>();
 
         public TValue this[TKey key]
@@ -42,15 +42,29 @@ namespace BernhardHaus.Collections.WeakDictionary
 
         public void Clear() => this.internalDictionary.Clear();
 
-        public bool Contains(KeyValuePair<TKey, TValue> item) => ((IDictionary<TKey, TValue>)this.internalDictionary).Contains(item);
+        public bool Contains(KeyValuePair<TKey, TValue> item)
+        {
+            return this.internalDictionary.TryGetValue(item.Key, out var valueReference) && valueReference.Target.Equals(item.Value);
+        }
 
         public bool ContainsKey(TKey key) => this.internalDictionary.ContainsKey(key);
 
-        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) => ((IDictionary<TKey, TValue>)this.internalDictionary).CopyTo(array, arrayIndex);
+        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
+        {
+            foreach (KeyValuePair<TKey, WeakReference> keyValuePair in this.internalDictionary)
+            {
+                array[arrayIndex++] = new KeyValuePair<TKey, TValue>(keyValuePair.Key, (TValue)keyValuePair.Value.Target);
+            }
+        }
 
         public bool Remove(TKey key) => this.internalDictionary.Remove(key);
 
-        public bool Remove(KeyValuePair<TKey, TValue> item) => ((IDictionary<TKey, TValue>)this.internalDictionary).Remove(item);
+        public bool Remove(KeyValuePair<TKey, TValue> item)
+        {
+            return this.internalDictionary.TryGetValue(item.Key, out var valueReference)
+                && valueReference.Target.Equals(item.Value)
+                && this.internalDictionary.Remove(item.Key);
+        }
 
         public bool TryGetValue(TKey key, out TValue value)
         {
