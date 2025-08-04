@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -9,7 +10,7 @@ namespace BernhardHaus.Collections.WeakDictionary
     public class WeakDictionary<TKey, TValue> : IDictionary<TKey, TValue>
         where TValue : class
     {
-        private readonly IDictionary<TKey, WeakReference> internalDictionary = new Dictionary<TKey, WeakReference>();
+        private readonly ConcurrentDictionary<TKey, WeakReference> internalDictionary = new ConcurrentDictionary<TKey, WeakReference>();
         private readonly ConditionalWeakTable<TValue, Finalizer> conditionalWeakTable = new ConditionalWeakTable<TValue, Finalizer>();
 
         public TValue this[TKey key]
@@ -32,7 +33,10 @@ namespace BernhardHaus.Collections.WeakDictionary
 
         public void Add(TKey key, TValue value)
         {
-            this.internalDictionary.Add(key, new WeakReference(value));
+            if (!this.internalDictionary.TryAdd(key, new WeakReference(value)))
+            {
+                throw new Exception($"Adding entry [{key}, {value}] failed.");
+            }
             var finalizer = new Finalizer(key);
             finalizer.ValueFinalized += k => Remove(k);
             this.conditionalWeakTable.Add(value, finalizer);
@@ -57,13 +61,13 @@ namespace BernhardHaus.Collections.WeakDictionary
             }
         }
 
-        public bool Remove(TKey key) => this.internalDictionary.Remove(key);
+        public bool Remove(TKey key) => this.internalDictionary.TryRemove(key, out _);
 
         public bool Remove(KeyValuePair<TKey, TValue> item)
         {
             return this.internalDictionary.TryGetValue(item.Key, out var valueReference)
                 && valueReference.Target.Equals(item.Value)
-                && this.internalDictionary.Remove(item.Key);
+                && this.internalDictionary.TryRemove(item.Key, out _);
         }
 
         public bool TryGetValue(TKey key, out TValue value)
