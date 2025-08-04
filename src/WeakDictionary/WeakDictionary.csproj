@@ -5,9 +5,10 @@
     <AssemblyName>BernhardHaus.Collections.WeakDictionary</AssemblyName>
     <RootNamespace>BernhardHaus.Collections.WeakDictionary</RootNamespace>
     <Title>Weak Dictionary</Title>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Authors>Bernhard Häussermann</Authors>
     <Description>An implementation of a dictionary having weak references on its values.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     
     <PackageProjectUrl>https://github.com/bhaeussermann/weak-dictionary</PackageProjectUrl>
     <PackageTags>WeakDictionary;Dictionary;WeakReference</PackageTags>
@@ -17,5 +18,9 @@
     
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
